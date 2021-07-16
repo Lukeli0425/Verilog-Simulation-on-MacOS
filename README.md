@@ -92,12 +92,23 @@ endmodule
 
 在Vscode中搜索并下载Verilog HDL插件：
 
-[image](截屏2021-07-16 12.45.37.png)
+![Verilog HDL](https://github.com/Lukeli0425/Verilog-Simulation-on-MacOS/raw/main/Verilog%20HDL.jpg)
+
+之后打开testbench模块backpack_tb.v，点击右上角的绿色图标进行编译：
+
+![Operate HDL](https://github.com/Lukeli0425/Verilog-Simulation-on-MacOS/raw/main/Operate%20HDL.jpg)
+
+此时如果代码中有错误会在下方的输出中显示，如果编译成功并且波形文件产生成功，输出会显示：
+
 ```shell
 [Running] Backpack_tb.v
 VCD info: dumpfile Backpack.vcd opened for output.
 [Done] exit with code=0 in 0.072 seconds
 ```
+此后直接用gtkwave打开Backpack.vcd查看波形即可。
+
+![Wave](https://github.com/Lukeli0425/Verilog-Simulation-on-MacOS/raw/main/wave.jpg)
+
 ### Method 2: 使用终端命令行
 这个方法同样利用Icarus Verilog生成波形文件,因此前述在verilog代码中添加的iverilog命令在这种方法下不能被省略。编写如下的脚本文件 wave.sh：
 ```zsh
