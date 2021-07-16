@@ -1,8 +1,8 @@
-## MacOS上进行verilog仿真
+## MacOS上进行Verilog仿真
 ## Verilog Simulation on MacOS
 #### 2021.7.16 Luke 
 ### Preface
-MacOS系统一向以开发者友好而著称，然而对于Verilog开发者来说，macOS上没有对应的Vivado、ModelSim等软件，这是极大的不便。本文档将介绍基于代码编辑器VScode、Icarus Verilog和波形查看器gtkwave的verilog波形仿真方法。这里给出的代码样例为利用动态规划的方法求解背包问题，并利用7段码扫描显示16进制的结果。
+MacOS系统一向以开发者友好而著称，然而对于Verilog开发者来说，macOS上没有对应的Vivado、ModelSim等软件，这是极大的不便。本文档将介绍基于代码编辑器VScode、Verilog仿真工具Icarus Verilog和波形查看器gtkwave的Verilog波形仿真方法。这里给出的代码样例为利用动态规划的方法求解背包问题，并利用7段码扫描显示16进制的结果。
 
 ### 前期准备
 #### 1.下载VScode
@@ -11,7 +11,7 @@ MacOS系统一向以开发者友好而著称，然而对于Verilog开发者来�
 
 #### 2.安装Icarus Verilog
 
-利用Homebrew安装，在终端中输入：
+使用Homebrew安装，在终端中输入：
 ```zsh
 brew install icarus-verilog
 ```
@@ -112,7 +112,7 @@ VCD info: dumpfile Backpack.vcd opened for output.
 注意，使用这个插件仍需要下载Icarus Verilog，因此本质上它仍是使用Icarus Verilog进行编译和产生波形文件，只是比较方便快捷。
 
 ### 波形仿真Method 2: 在终端中运行脚本文件
-这个方法同样利用Icarus Verilog生成波形文件,因此前述在verilog代码中添加的iverilog命令在这种方法下不能被省略。编写如下的脚本文件 wave.sh：
+这个方法同样利用Icarus Verilog生成波形文件,因此前述在Verilog代码中添加的iverilog命令在这种方法下不能被省略。编写如下的脚本文件 wave.sh：
 ```zsh
 echo "开始编译"
 iverilog -o Backpack.vvp Backpack_tb.v 
@@ -151,3 +151,4 @@ Icarus Verliog主页：[Icarus Verliog](http://iverilog.icarus.com)
 
 gtkwave主页：[gtkwave](http://gtkwave.sourceforge.net)
 
+Contact me: lukeli@sina.cn
