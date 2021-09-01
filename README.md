@@ -80,7 +80,7 @@ top mytop(clk,reset,ano,cathodes);
 initial begin
 	$dumpfile("Backpack.vcd");//产生波形文件
 	$dumpvars(0,Backpack_tb);
-    #500 //仿真时间
+	#500 //仿真时间
 	$finish;
 end
 /*iverilog */
